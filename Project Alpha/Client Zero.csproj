@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('..\packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FD358E1-99B0-4E27-A50A-299860E613BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project_Alpha</RootNamespace>
+    <AssemblyName>Project Alpha</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="About\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Class\AuthenticationCheck.cs" />
+    <Compile Include="Custom Class\GameInfo.cs" />
+    <Compile Include="Custom Class\StaticInfo.cs" />
+    <Compile Include="Custom Design\Animation.cs" />
+    <Compile Include="Custom Design\Custom_Checkbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Design\DoubleClick.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom List File\purchased SIngle Item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom List File\purchased SIngle Item.designer.cs">
+      <DependentUpon>purchased SIngle Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database Access\LoadGameData.cs" />
+    <Compile Include="Database Access\LoadUserData.cs" />
+    <Compile Include="Header\cart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Header\cart.Designer.cs">
+      <DependentUpon>cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Dash Access\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Left Dash Access\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Dash Access\Games.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Left Dash Access\Games.Designer.cs">
+      <DependentUpon>Games.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics Extension.cs" />
+    <Compile Include="Login and Register\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login and Register\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Header\notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Header\notification.Designer.cs">
+      <DependentUpon>notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom List File\Notification_ls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom List File\Notification_ls.Designer.cs">
+      <DependentUpon>Notification_ls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Design\OvalPicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Login and Register\Register.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login and Register\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Design\Rounded Panel.cs" />
+    <Compile Include="Custom Design\Round_btn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Design\round_txtfield.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Left Dash Access\Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Left Dash Access\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Dash Access\Vendors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Left Dash Access\Vendors.Designer.cs">
+      <DependentUpon>Vendors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom List File\vendor_product_ls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom List File\vendor_product_ls.Designer.cs">
+      <DependentUpon>vendor_product_ls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Left Dash Access\Wallet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Left Dash Access\Wallet.Designer.cs">
+      <DependentUpon>Wallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seller\Seller_Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Seller\Seller_Home.Designer.cs">
+      <DependentUpon>Seller_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session Creation\Controller_Session.cs" />
+    <Compile Include="Session Creation\Database_Session.cs" />
+    <Compile Include="UserCardinalitiesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserCardinalitiesDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom List File\purchased SIngle Item.resx">
+      <DependentUpon>purchased SIngle Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Header\cart.resx">
+      <DependentUpon>cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Dash Access\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Dash Access\Games.resx">
+      <DependentUpon>Games.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login and Register\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Header\notification.resx">
+      <DependentUpon>notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom List File\Notification_ls.resx">
+      <DependentUpon>Notification_ls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login and Register\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Dash Access\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Dash Access\Vendors.resx">
+      <DependentUpon>Vendors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom List File\vendor_product_ls.resx">
+      <DependentUpon>vendor_product_ls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Left Dash Access\Wallet.resx">
+      <DependentUpon>Wallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seller\Seller_Home.resx">
+      <DependentUpon>Seller_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UserCardinalitiesDataSet.xsc">
+      <DependentUpon>UserCardinalitiesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UserCardinalitiesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserCardinalitiesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserCardinalitiesDataSet.xss">
+      <DependentUpon>UserCardinalitiesDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dashboard_btn\FlatAppearance\" />
+    <Folder Include="Database\" />
+    <Folder Include="File Operation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\_2000px_Taka__Bengali_letter__svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Asset 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Component3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\dashboard.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\dashboard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\dashboard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\dashboard3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Group 40 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Group 40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Group 41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Group 42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Group_43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\joystick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\moto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Path 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Path 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Path 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\pc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\PUBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\PUBG_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\wheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\vector1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\analyzers\dotnet\cs\Humanizer.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.CodeQuality.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Asset 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Asset 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\11896.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\31799.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\dota.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Asset 1%404x.png" />
+    <None Include="Properties\Resources\84349278_1795715900559397_6414418487027957760_o.jpg" />
+    <None Include="Properties\Resources\24831155_930691230429631_4734043763560114484_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Resources\83075918_2763562853713317_8663627108288823296_o.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+  </Target>
+</Project>
