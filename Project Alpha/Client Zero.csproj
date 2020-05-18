@@ -91,6 +91,12 @@
     <Compile Include="Custom Design\DoubleClick.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Custom List File\cart_product_ls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom List File\cart_product_ls.Designer.cs">
+      <DependentUpon>cart_product_ls.cs</DependentUpon>
+    </Compile>
     <Compile Include="Custom List File\purchased SIngle Item.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </Compile>
     <EmbeddedResource Include="About\About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom List File\cart_product_ls.resx">
+      <DependentUpon>cart_product_ls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Custom List File\purchased SIngle Item.resx">
       <DependentUpon>purchased SIngle Item.cs</DependentUpon>

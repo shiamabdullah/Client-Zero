@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project_Alpha.Header
+namespace Project_Alpha.Custom_List_File
 {
-    public partial class Cart : UserControl
+    public partial class cart_product_ls : UserControl
     {
-        public Cart()
+        public cart_product_ls()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Hide();
         }
