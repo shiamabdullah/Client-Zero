@@ -62,6 +62,8 @@ namespace Project_Alpha
             if (ac.checkUser(email, pass))
             {
                 Form1.Instance.SetLabel(LoadUserData.userName);
+                //Form1.Instance.SetLabel(LoadUserData.);
+
                 if (ac.featureCheck())
                 {
                     MessageBox.Show("Login as Customer Successful");

@@ -17,7 +17,7 @@ namespace Project_Alpha.Custom_Class
             gameData = new LoadGameData();
             updateGameData = new UpdateGameData();
         }
-        public void addGame(string gameName,double gamePrice,int gameCount,string platform,string rating) 
+        public void addGame(string gameName,double gamePrice,int gameCount,string platform,string rating,byte[] gameImage) 
         {
             string userId = LoadUserData.userID;
             int gameID= gameData.ifExists(gameName);
@@ -29,7 +29,7 @@ namespace Project_Alpha.Custom_Class
             else
             {
                 gameID = 3001 + LoadGameData.gameCount;
-                updateGameData.addNewGame(gameName, gameID, gamePrice, gameCount, platform,userId,rating);
+                updateGameData.addNewGame(gameName, gameID, gamePrice, gameCount, platform,userId,rating,gameImage);
             }
 
         }

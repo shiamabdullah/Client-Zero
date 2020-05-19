@@ -103,7 +103,7 @@ namespace Project_Alpha.Seller
             }
             string rating = round4.Text;
             AddGame addGame = new AddGame();
-            addGame.addGame(gameName, gamePrice, gameCount, platform, rating);
+            addGame.addGame(gameName, gamePrice, gameCount, platform, rating,gameimages);
         }
     }
 }

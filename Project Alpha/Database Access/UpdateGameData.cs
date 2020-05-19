@@ -25,11 +25,11 @@ namespace Project_Alpha.Database_Access
             throw new NotImplementedException();
         }
 
-        internal void addNewGame(string gameName, int gameID, double gamePrice, int gameCount, string platform, string userId,string rating)
+        internal void addNewGame(string gameName, int gameID, double gamePrice, int gameCount, string platform, string userId,string rating,byte[] gameimg )
         {
             connection = new SqlConnection(connectionString);
             connection.Open();
-            string sql = "INSERT INTO Games (GameID,GameName, Price,Rating,Platform) VALUES(" + gameID.ToString() + ",'" + gameName + "','" + gamePrice.ToString() + "','" + rating + "','" + platform + "'); ";
+            string sql = "INSERT INTO Games (GameID,GameName, Price,Rating,Picture,Platform) VALUES(" + gameID.ToString() + ",'" + gameName + "','" + gamePrice.ToString() + "','" + rating + "','"+ gameimg + "','" + platform + "'); ";
             SqlCommand command = new SqlCommand(sql, connection);
             command.ExecuteNonQuery();
             MessageBox.Show(command.CommandText);
