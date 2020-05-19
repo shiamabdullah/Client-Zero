@@ -38,6 +38,12 @@ namespace Project_Alpha
             set { panelContainer = value; }
         }
 
+
+        public void SetLabel(string newText)
+        {
+            Invoke(new Action(() => label3.Text = newText));
+        }
+
         public Form1()
         {
 
@@ -71,6 +77,7 @@ namespace Project_Alpha
 
         private void Dashboard_btn_Click(object sender, EventArgs e)
         {
+           
             if (AuthenticationCheck.logedin) {
                 if (AuthenticationCheck.feature)
 
@@ -260,7 +267,10 @@ namespace Project_Alpha
 
         private void Dashboard_btn_MouseHover(object sender, EventArgs e)
         {
-           
+
+            Dashboard_btn.ForeColor = Color.Black;
+            Dashboard_btn.BackColor = Color.YellowGreen;
+
         }
 
         private void ovalPictureBox1_Click(object sender, EventArgs e)
@@ -315,7 +325,71 @@ namespace Project_Alpha
             }
 
     }
-}
+
+        private void Dashboard_btn_MouseEnter(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void Dashboard_btn_MouseLeave(object sender, EventArgs e)
+        {
+            Dashboard_btn.ForeColor = Color.White;
+            Dashboard_btn.BackColor = Color.Transparent;
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.ForeColor = Color.Black;
+            button1.BackColor = Color.YellowGreen;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.ForeColor = Color.White;
+            button1.BackColor = Color.Transparent;
+        }
+
+        private void Games_MouseHover(object sender, EventArgs e)
+        {
+            Games.ForeColor = Color.Black;
+            Games.BackColor = Color.YellowGreen;
+        }
+
+        private void Wallet_MouseHover(object sender, EventArgs e)
+        {
+            Wallet.ForeColor = Color.Black;
+            Wallet.BackColor = Color.YellowGreen;
+        }
+
+        private void button12_MouseHover(object sender, EventArgs e)
+        {
+            button12.ForeColor = Color.Black;
+            button12.BackColor = Color.YellowGreen;
+        }
+
+        private void Games_MouseLeave(object sender, EventArgs e)
+        {
+            Games.ForeColor = Color.White;
+            Games.BackColor = Color.Transparent;
+        }
+
+        private void Wallet_MouseLeave(object sender, EventArgs e)
+        {
+            Wallet.ForeColor = Color.White;
+            Wallet.BackColor = Color.Transparent;
+        }
+
+        private void button12_MouseLeave(object sender, EventArgs e)
+        {
+            button12.ForeColor = Color.White;
+            button12.BackColor = Color.Transparent;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("tel:+880152103280");
+        }
+    }
     
 
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using Project_Alpha.Custom_Class;
+using Project_Alpha.Database_Access;
 
 namespace Project_Alpha
 {
@@ -60,6 +61,7 @@ namespace Project_Alpha
             pass = round2.Text;
             if (ac.checkUser(email, pass))
             {
+                Form1.Instance.SetLabel(LoadUserData.userName);
                 if (ac.featureCheck())
                 {
                     MessageBox.Show("Login as Customer Successful");

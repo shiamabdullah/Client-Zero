@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Project_Alpha.Custom_List_File;
 using Project_Alpha.Custom_Class;
+using Project_Alpha.message_box;
 
 namespace Project_Alpha.Header
 {
@@ -17,6 +18,7 @@ namespace Project_Alpha.Header
         cart_product_ls[] userCart;
         node[] cartNode;
         int size = 0;
+       
         public Cart()
         {
             cartNode = Form1.queue.getItems();
@@ -65,12 +67,21 @@ namespace Project_Alpha.Header
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Hide();
+            Dispose();
         }
 
         private void purchased_SIngle_Item1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            messagebox messagebox = new messagebox();
+            messagebox.ShowDialog();
+            
+               
         }
     }
 }

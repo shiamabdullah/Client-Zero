@@ -93,17 +93,18 @@
     <Compile Include="Custom Design\DoubleClick.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Custom Design\MessageBoxManager.cs" />
     <Compile Include="Custom List File\cart_product_ls.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Custom List File\cart_product_ls.Designer.cs">
       <DependentUpon>cart_product_ls.cs</DependentUpon>
     </Compile>
-    <Compile Include="Custom List File\purchased SIngle Item.cs">
+    <Compile Include="Custom List File\personal_game_ls.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Custom List File\purchased SIngle Item.designer.cs">
-      <DependentUpon>purchased SIngle Item.cs</DependentUpon>
+    <Compile Include="Custom List File\personal_game_ls.Designer.cs">
+      <DependentUpon>personal_game_ls.cs</DependentUpon>
     </Compile>
     <Compile Include="Database Access\LoadGameData.cs" />
     <Compile Include="Database Access\LoadUserData.cs" />
@@ -153,6 +154,12 @@
     </Compile>
     <Compile Include="Custom Design\OvalPicture.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="message box\messagebox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="message box\messagebox.Designer.cs">
+      <DependentUpon>messagebox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -217,8 +224,8 @@
     <EmbeddedResource Include="Custom List File\cart_product_ls.resx">
       <DependentUpon>cart_product_ls.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Custom List File\purchased SIngle Item.resx">
-      <DependentUpon>purchased SIngle Item.cs</DependentUpon>
+    <EmbeddedResource Include="Custom List File\personal_game_ls.resx">
+      <DependentUpon>personal_game_ls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Header\cart.resx">
       <DependentUpon>cart.cs</DependentUpon>
@@ -240,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Custom List File\Notification_ls.resx">
       <DependentUpon>Notification_ls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="message box\messagebox.resx">
+      <DependentUpon>messagebox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -264,6 +274,7 @@
     <EmbeddedResource Include="Seller\Seller_Home.resx">
       <DependentUpon>Seller_Home.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Custom Design\MessageBoxManager.csproj" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -456,6 +467,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\Resources\83075918_2763562853713317_8663627108288823296_o.jpg" />
+    <None Include="Properties\Resources\images.jpg" />
+    <None Include="Properties\Resources\bkash_logo_0.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

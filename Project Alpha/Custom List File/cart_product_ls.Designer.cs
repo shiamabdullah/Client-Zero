@@ -47,6 +47,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label6.Location = new System.Drawing.Point(63, 261);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
@@ -56,6 +57,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(6, 261);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
@@ -75,6 +77,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Location = new System.Drawing.Point(47, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 13);
@@ -84,6 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(6, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
@@ -105,6 +109,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(130, 253);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 24);
@@ -115,6 +120,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(2, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 13);
@@ -124,6 +130,7 @@
             // gameNamelbl
             // 
             this.gameNamelbl.AutoSize = true;
+            this.gameNamelbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.gameNamelbl.Location = new System.Drawing.Point(3, 153);
             this.gameNamelbl.Name = "gameNamelbl";
             this.gameNamelbl.Size = new System.Drawing.Size(135, 13);
@@ -171,7 +178,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gameNamelbl);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "cart_product_ls";
             this.Size = new System.Drawing.Size(188, 284);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
