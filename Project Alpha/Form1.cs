@@ -10,6 +10,7 @@ using Project_Alpha.Custom_Class;
 using Project_Alpha.Seller;
 using Project_Alpha.Header;
 using Project_Alpha.Database_Access;
+using Project_Alpha.message_box;
 
 namespace Project_Alpha
 {
@@ -275,15 +276,9 @@ namespace Project_Alpha
 
         private void ovalPictureBox1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog opnfd = new OpenFileDialog();
-            opnfd.Filter = "Image Files (*.jpg;*.jpeg;.*.gif;)|*.jpg;*.jpeg;.*.gif";
 
-            if (opnfd.ShowDialog() == DialogResult.OK)
-            {
-              
-
-            }
-        
+            profile_picture profile_Picture = new profile_picture();
+            profile_Picture.ShowDialog();
         }
         
         private void label6_Click(object sender, EventArgs e)

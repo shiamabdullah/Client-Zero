@@ -34,6 +34,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ovalPictureBox1 = new OvalPictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button12 = new System.Windows.Forms.Button();
@@ -49,20 +50,19 @@
             this.panelContainer = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.round1 = new Project_Alpha.round();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.Search_btn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.round1 = new Project_Alpha.round();
-            this.ovalPictureBox1 = new OvalPictureBox();
             this.Contact_us.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Contact_us
@@ -149,6 +149,18 @@
             this.pictureBox2.Size = new System.Drawing.Size(127, 76);
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
+            // 
+            // ovalPictureBox1
+            // 
+            this.ovalPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
+            this.ovalPictureBox1.Image = global::Project_Alpha.Properties.Resources.vector1;
+            this.ovalPictureBox1.Location = new System.Drawing.Point(11, 85);
+            this.ovalPictureBox1.Name = "ovalPictureBox1";
+            this.ovalPictureBox1.Size = new System.Drawing.Size(62, 63);
+            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ovalPictureBox1.TabIndex = 5;
+            this.ovalPictureBox1.TabStop = false;
+            this.ovalPictureBox1.Click += new System.EventHandler(this.ovalPictureBox1_Click);
             // 
             // checkBox1
             // 
@@ -372,6 +384,17 @@
             this.materialDivider1.TabIndex = 8;
             this.materialDivider1.Text = "materialDivider1";
             // 
+            // round1
+            // 
+            this.round1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.round1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.round1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.round1.Location = new System.Drawing.Point(328, 25);
+            this.round1.Name = "round1";
+            this.round1.Size = new System.Drawing.Size(439, 40);
+            this.round1.TabIndex = 7;
+            this.round1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.round1_KeyPress);
+            // 
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.Transparent;
@@ -447,28 +470,6 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "LOGIN";
             // 
-            // round1
-            // 
-            this.round1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.round1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.round1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.round1.Location = new System.Drawing.Point(328, 25);
-            this.round1.Name = "round1";
-            this.round1.Size = new System.Drawing.Size(439, 40);
-            this.round1.TabIndex = 7;
-            this.round1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.round1_KeyPress);
-            // 
-            // ovalPictureBox1
-            // 
-            this.ovalPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(69)))), ((int)(((byte)(158)))));
-            this.ovalPictureBox1.Image = global::Project_Alpha.Properties.Resources.vector1;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(11, 85);
-            this.ovalPictureBox1.Name = "ovalPictureBox1";
-            this.ovalPictureBox1.Size = new System.Drawing.Size(62, 63);
-            this.ovalPictureBox1.TabIndex = 5;
-            this.ovalPictureBox1.TabStop = false;
-            this.ovalPictureBox1.Click += new System.EventHandler(this.ovalPictureBox1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,12 +494,12 @@
             this.Contact_us.ResumeLayout(false);
             this.Contact_us.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
