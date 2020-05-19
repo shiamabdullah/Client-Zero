@@ -31,5 +31,10 @@ namespace Project_Alpha
             }
             Form1.Instance.panel.Controls["Login"].BringToFront();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.roundedButton1 = new RoundedButton();
-            this.round3 = new Project_Alpha.round();
-            this.round2 = new Project_Alpha.round();
-            this.round1 = new Project_Alpha.round();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.roundedButton2 = new RoundedButton();
+            this.roundedButton1 = new RoundedButton();
+            this.round3 = new Project_Alpha.round();
+            this.round2 = new Project_Alpha.round();
+            this.round1 = new Project_Alpha.round();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,49 +60,12 @@
             this.panel1.Size = new System.Drawing.Size(1020, 770);
             this.panel1.TabIndex = 0;
             // 
-            // roundedButton1
-            // 
-            this.roundedButton1.BackColor = System.Drawing.Color.Aqua;
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton1.ForeColor = System.Drawing.Color.DimGray;
-            this.roundedButton1.Location = new System.Drawing.Point(88, 269);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(168, 45);
-            this.roundedButton1.TabIndex = 8;
-            this.roundedButton1.Text = "CHANGE";
-            this.roundedButton1.UseVisualStyleBackColor = false;
-            // 
-            // round3
-            // 
-            this.round3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.round3.Location = new System.Drawing.Point(303, 208);
-            this.round3.Name = "round3";
-            this.round3.Size = new System.Drawing.Size(224, 22);
-            this.round3.TabIndex = 7;
-            // 
-            // round2
-            // 
-            this.round2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.round2.Location = new System.Drawing.Point(303, 162);
-            this.round2.Name = "round2";
-            this.round2.Size = new System.Drawing.Size(224, 22);
-            this.round2.TabIndex = 6;
-            // 
-            // round1
-            // 
-            this.round1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.round1.Location = new System.Drawing.Point(303, 118);
-            this.round1.Name = "round1";
-            this.round1.Size = new System.Drawing.Size(224, 22);
-            this.round1.TabIndex = 5;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(84, 208);
+            this.label5.Location = new System.Drawing.Point(93, 394);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(185, 20);
             this.label5.TabIndex = 4;
@@ -113,7 +76,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(84, 162);
+            this.label4.Location = new System.Drawing.Point(93, 288);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 20);
             this.label4.TabIndex = 3;
@@ -124,7 +87,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(84, 118);
+            this.label3.Location = new System.Drawing.Point(97, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 20);
             this.label3.TabIndex = 2;
@@ -133,11 +96,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(190, 66);
+            this.label2.Location = new System.Drawing.Point(206, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.Size = new System.Drawing.Size(0, 25);
             this.label2.TabIndex = 1;
             // 
             // label1
@@ -145,11 +108,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(84, 66);
+            this.label1.Location = new System.Drawing.Point(97, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "USERNAME :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // roundedButton2
             // 
@@ -164,6 +128,44 @@
             this.roundedButton2.Text = "LOG OUT";
             this.roundedButton2.UseVisualStyleBackColor = false;
             this.roundedButton2.Click += new System.EventHandler(this.roundedButton2_Click);
+            // 
+            // roundedButton1
+            // 
+            this.roundedButton1.BackColor = System.Drawing.Color.Aqua;
+            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton1.ForeColor = System.Drawing.Color.DimGray;
+            this.roundedButton1.Location = new System.Drawing.Point(110, 586);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Size = new System.Drawing.Size(168, 45);
+            this.roundedButton1.TabIndex = 8;
+            this.roundedButton1.Text = "CHANGE";
+            this.roundedButton1.UseVisualStyleBackColor = false;
+            // 
+            // round3
+            // 
+            this.round3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.round3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.round3.Location = new System.Drawing.Point(303, 382);
+            this.round3.Name = "round3";
+            this.round3.Size = new System.Drawing.Size(224, 38);
+            this.round3.TabIndex = 7;
+            // 
+            // round2
+            // 
+            this.round2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.round2.Location = new System.Drawing.Point(303, 275);
+            this.round2.Name = "round2";
+            this.round2.Size = new System.Drawing.Size(224, 38);
+            this.round2.TabIndex = 6;
+            // 
+            // round1
+            // 
+            this.round1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.round1.Location = new System.Drawing.Point(303, 190);
+            this.round1.Name = "round1";
+            this.round1.Size = new System.Drawing.Size(224, 38);
+            this.round1.TabIndex = 5;
             // 
             // Settings
             // 

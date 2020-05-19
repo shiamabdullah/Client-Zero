@@ -36,14 +36,15 @@ namespace Project_Alpha.message_box
         private void button2_Click(object sender, EventArgs e)
         {
             byte[] profileimages = null;
-
+            
 
             FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
             BinaryReader brs = new BinaryReader(stream);
             profileimages = brs.ReadBytes((int)stream.Length);
 
+            MessageBox.Show("Upcoming Feature");
+      
 
-            Dispose();
         }
     }
 }

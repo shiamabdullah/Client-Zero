@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +49,16 @@ namespace Project_Alpha.Database_Access
             gameName = gameTable.Rows[index - 1][5].ToString();
             return this.gameName;
         }
+        public string getGamePicture(int index)
+        {
+
+          
+            gameName =  (gameTable.Rows[index - 1][4].ToString());
+
+            return this.gameName;
+        }
+    
+
         public LoadGameData()
         {
             connectionString = ConfigurationManager.ConnectionStrings["Project_Alpha.Properties.Settings.UserCardinalitiesConnectionString"].ConnectionString;

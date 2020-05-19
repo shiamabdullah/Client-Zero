@@ -56,6 +56,7 @@ namespace Project_Alpha
             this.Controls.Add(uc);
             panelContainer.Controls.Add(uc);
             panelContainer.Controls["Login"].BringToFront();
+            //ovalPictureBox1.Image = LoadUserData.;
             label3.Text = LoadUserData.userName;
             Refresh();
         }

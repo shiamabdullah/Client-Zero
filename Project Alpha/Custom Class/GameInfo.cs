@@ -3,7 +3,8 @@ using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Project_Alpha.Database_Access;
-
+using System.Text;
+using System.IO;
 
 namespace Project_Alpha.Custom_Class
 {
@@ -16,8 +17,11 @@ namespace Project_Alpha.Custom_Class
             this.GameName= ld.getGameName(i);
             this.GamePlatform= ld.getGamePlatform(i);
             this.GamePrice= ld.getGamePrice(i);
-            this.GameRating= ld.getGameRating(i);
-            this.GamePicture= Resources.dota;
+            this.GameRating = ld.getGameRating(i);
+            MemoryStream ms = new MemoryStream(Convert.ToInt32(ld.getGamePicture(i)));
+           
+
+
         }
         public String GameName { set; get; }
         public String GameRating { set; get; }
