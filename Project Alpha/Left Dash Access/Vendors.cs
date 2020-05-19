@@ -87,6 +87,7 @@ namespace Project_Alpha
             {
                 gameInfo.LoadInfo(((page - 1) * 10) + (i + 1));
                 vendor_Product_Ls[i] = new vendor_product_ls();
+                vendor_Product_Ls[i].setInfo(i, gameInfo.GameName, gameInfo.GamePrice, gameInfo.GamePlatform);
                 vendor_Product_Ls[i].Visible = true;
                 vendor_Product_Ls[i].gameName = gameInfo.GameName;
                 vendor_Product_Ls[i].shopName = gameInfo.ShopName;

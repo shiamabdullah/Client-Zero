@@ -18,6 +18,7 @@ namespace Project_Alpha.Database_Access
         private DataTable userTable=new DataTable();
         public static string userEmail=" ";
         public static string userName = " ";
+        public static string userID = " ";
         private static int totalUser = 0;
         public string getPassword(string email)
         {
@@ -28,6 +29,7 @@ namespace Project_Alpha.Database_Access
                 {
                     userEmail = email;
                     userName= userTable.Rows[i][2].ToString();
+                    userID = userTable.Rows[i][0].ToString();
                     feature = userTable.Rows[i][4].ToString();
                     password = userTable.Rows[i][3].ToString(); 
                 }

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Project_Alpha.Custom_Class;
 using Project_Alpha.Seller;
 using Project_Alpha.Header;
+using Project_Alpha.Database_Access;
 
 namespace Project_Alpha
 {
@@ -16,6 +17,7 @@ namespace Project_Alpha
     {
 
         static Form1 _obj1;
+        public static CustomQueue queue = new CustomQueue();
     
 
         public static Form1 Instance
@@ -47,7 +49,8 @@ namespace Project_Alpha
             this.Controls.Add(uc);
             panelContainer.Controls.Add(uc);
             panelContainer.Controls["Login"].BringToFront();
-            label3.Text = StaticInfo.getUserName();
+            label3.Text = LoadUserData.userName;
+            Refresh();
         }
 
         public class PanelDoubleBuffered : System.Windows.Forms.Panel
@@ -290,7 +293,6 @@ namespace Project_Alpha
 
         private void label3_Click(object sender, EventArgs e)
         {
-
         }
 
         private void button9_Click(object sender, EventArgs e)

@@ -15,8 +15,18 @@ namespace Project_Alpha.Database_Access
         private string connectionString;
         private SqlConnection connection;
         private DataTable gameTable = new DataTable();
+
+        internal int ifExists(string Name)
+        {
+            for (int i = 0; i < gameTable.Rows.Count; i++)
+            {
+                if (Name.Equals(gameTable.Rows[i][1])) return i;
+            }
+            return -1;
+        }
+
         public static int gameCount;
-        public string gameName { set; get; }
+        private string gameName { set; get; }
         public string getGameName(int index) 
         {
             gameName = gameTable.Rows[index-1][1].ToString();

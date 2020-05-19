@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Project_Alpha.Custom_Class;
 
 namespace Project_Alpha.Seller
 {
@@ -69,7 +70,20 @@ namespace Project_Alpha.Seller
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //post game
+            string gameName = round1.Text;
+            int gameCount = Int16.Parse(round2.Text);
+            double gamePrice= Double.Parse(round3.Text);
+            string platform="";
+            if (radioButton1.Checked) { platform = "PC"; }
+            else if (radioButton2.Checked) { platform = "PS4"; }
+            else if (radioButton3.Checked) { platform = "XBOX"; }
+            else 
+            {
+                MessageBox.Show("Enter Game Platform");
+            }
+            string rating = round4.Text;
+            AddGame addGame = new AddGame();
+            addGame.addGame(gameName, gamePrice, gameCount, platform, rating);
         }
     }
 }

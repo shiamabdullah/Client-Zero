@@ -7,11 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Project_Alpha.Custom_Class;
 
 namespace Project_Alpha
 {
     public partial class vendor_product_ls : UserControl
     {
+        int id;
+        double price;
+        string name;
+        string gameplatform;
+        public void setInfo(int id,string name,string price,string platform)
+        {
+            this.id = id;
+            this.name = name;
+            this.gameplatform = platform;
+            this.price = Double.Parse(price);
+        }
+
         public vendor_product_ls()
         {
             InitializeComponent();
@@ -100,6 +113,11 @@ namespace Project_Alpha
         private void label6_Click(object sender, EventArgs e)
         {
             //platform
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1.queue.Push(id, name, platform, price);
         }
     }
 }

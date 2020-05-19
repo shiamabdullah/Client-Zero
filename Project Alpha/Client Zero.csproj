@@ -81,7 +81,9 @@
     <Compile Include="About\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom Class\AddGame.cs" />
     <Compile Include="Custom Class\AuthenticationCheck.cs" />
+    <Compile Include="Custom Class\CustomQueue.cs" />
     <Compile Include="Custom Class\GameInfo.cs" />
     <Compile Include="Custom Class\StaticInfo.cs" />
     <Compile Include="Custom Design\Animation.cs" />
@@ -105,6 +107,7 @@
     </Compile>
     <Compile Include="Database Access\LoadGameData.cs" />
     <Compile Include="Database Access\LoadUserData.cs" />
+    <Compile Include="Database Access\UpdateGameData.cs" />
     <Compile Include="Header\cart.cs">
       <SubType>UserControl</SubType>
     </Compile>
