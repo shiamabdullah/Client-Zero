@@ -20,9 +20,7 @@ namespace Project_Alpha.Custom_Class
             this.GameRating = ld.getGameRating(i);
             MemoryStream ms = new MemoryStream(Convert.ToInt32(ld.getGamePicture(i)));
            
-            //abcygyuguygyugyug
-            //uygygyg
-
+           
 
         }
         public String GameName { set; get; }
